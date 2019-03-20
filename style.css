@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(img/img1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.7s;
+    position: fixed;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#logo {
+    font-size: 3.4em;
+    transform: rotate(90deg);
+    margin-left: -15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+#main-site-addres{
+    margin-left: 20px;
+    display: none;
+}
+
+#main-site-hours {
+    display: none;
+}
+
+#main-site-addres,
+#main-site-hours{
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#info-click {
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    transition: slow;
+    height: 40px;
+}
+
+#info-par {
+    display: none;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    width: 200px;
+    top:100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 2px 2px 24px 0px rgba(0,0,0,0.75);
+
+}
+
+
+
+
+/*icon menu animation*/
+
+
+#wrapper {
+	background:transparent;
+	border: 2px solid #000;
+	display:inline-block;
+	border-radius:500px;
+	margin:10px;
+	position: relative;
+    padding:12px;
+	cursor:pointer;
+    z-index: 3;
+}
+
+.main-item {
+	width:20px;
+	height:20px;
+	position:relative;
+}
+
+.line {
+	position: absolute;
+	height: 11%;
+	width:100%;
+	background:white;
+	border: 2px solid #000;
+	border-radius:10px;
+	transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+}
+
+.line01 {
+	top:19%;
+}
+
+.line02 {
+	top:49%;
+}
+
+.line03 {
+	top:79%;
+}
+
+.menu.close .line01 {
+	transform:rotate(45deg);
+	top:49%;
+}
+
+.menu.close .line02, .menu.close .line03 {
+	transform:rotate(-45deg);
+	top:49%;
+}
+
+.toggle-menu {
+    width: 100%;
+    height: 100%;
+    background-color: #ffeaf4;
+    position: fixed;
+    top: 0;
+    right:-2400px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: 0.8s;
+
+}
+
+.toggle-menu h2 {
+    text-transform: uppercase;
+    padding: 15px 25px 0 25px;
+    text-align: center;
+    
+}
+
+.toggle-menu p{
+    padding: 15px 25px;
+    text-align: justify;
+}
+
+.menu-active {
+    right: 0;
+    transition: 0.8s;
+
+}
+
+#leaves img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#leaves {
+    width: 100%;
+    height: 200px;
+    margin-top: 45px;
+}
+
+.toggle-menu > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    padding: 0 20px;
+}
+
+.toggle-menu label p {
+    padding: 0;
+}
+
+.toggle-menu input,
+.toggle-menu label p {
+    text-align: left;
+}
+
+.toggle-menu input {
+    background-color: #ffeaf4;
+    border: none;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.toggle-menu label img {
+    width: 30px;
+    position: absolute;
+    right: 30px;
+}
+
+input:focus{
+    outline-style: none;
+}
+
+.day-hours {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-basis: 35%;    
+}
+
+
+.day-hours p {
+    padding: 0;    
+}
+
+.day-hours span{
+    padding: 3px;
+    margin-right: 15px;
+}
+
+.day-hours span::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    z-index: 4;
+    position: absolute;
+}
+
+#info-in-menu {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#about {
+    flex-basis: 80%;
+}
+
+.day-hours,
+#about {
+        margin-bottom: 55px; 
+}
+
+
+#insta {
+    width: 40px;
+    position: absolute;
+    bottom:3%;
+    left: 2%;
+}
+
+
+
+/*Media queries*/
+
+@media only screen and (orientation: landscape) {
+    
+    
+    #leaves {
+        height: 120px;
+        margin-bottom: -20px;
+    }
+
+    
+    .day-hours {
+        justify-content: center;
+        flex-basis: 20%;
+        margin-left: 20px;
+        margin-top: -80px;
+        font-size: 1.2em;
+    }
+    
+    .day-hours span {
+        margin-right: 5px;
+    }
+    
+    #about {
+        font-size: 1.2em;
+        padding-left: 0;
+    }
+    
+    #info-in-menu {
+        flex-direction: row-reverse;
+        
+    }
+    
+    label {
+        margin-bottom: 10px;
+    }
+    
+    .day-hours,
+    #about {
+    margin-bottom: 0;
+}
+
+    
+}
+
+@media only screen and (min-width: 765px) {
+    #about {
+        font-size: 1.5em;
+    }
+    
+    .day-hours p {
+        font-size: 1.2em;
+    }
+    
+    .toggle-menu h2 {
+        font-size: 3em;
+    }
+    
+    #info-in-menu {
+        margin-top: -100px;
+    }
+    
+    #leaves {
+        
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .toggle-menu {
+    width: 30%;
+    justify-content: space-around;
+    }
+    
+    #info-click{
+        display: none;
+    }
+    
+    #main-site-hours{
+        display: block;
+    }    
+       
+    
+    .day-hours{
+        display: none;
+    }
+    
+    #about{
+        flex-basis: 100%;
+        font-size: 1.2em;
+        margin-bottom: 300px;
+    }
+    
+    #main-site-hours span{
+        padding-bottom: 3px;
+    }
+    
+    #info-in-menu {
+        margin-top: 0;
+        padding: 20px;
+    }
+    
+    
+    #main-site-hours span::after{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    z-index: 4;
+    position: absolute;
+     
+    }
+    
+    #main-site-addres{
+        display: block;
+    }
+    
+    #leaves{
+        height: 200px;
+        margin-bottom: 30px;
+        
+    }
+    
+}
+
+@media only screen and (max-height: 370px) {
+    .day-hours{
+        font-size: 0.9em;
+        margin-bottom: 3px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    #leaves {
+        height: 140px
+    }
+    
+    .day-hours p,
+    #about {
+        font-size: 0.9em;
+    }
+    
+
+}
+
+@media only screen 
+    and (width : 812px) 
+    and (height : 375px) 
+     { 
+
+         h2 {
+        display: none;
+        }
+        #leaves {
+        margin-top: -5px;
+        }
+         #about{
+             font-size: 1.4em;
+             margin-top: 110px;
+         }
+         
+         .day-hours{
+             margin-top: 20px;
+         }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
