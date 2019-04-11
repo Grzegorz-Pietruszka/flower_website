@@ -5,7 +5,6 @@ $("#wrapper").click( function() {
 
 //logo animation
 $('#info-click').click(function() {
-    
     if($('#info-par').is(':visible')){
         $('#logo').css({'transform' : 'rotate(90deg)', });
     } else {
@@ -13,7 +12,6 @@ $('#info-click').click(function() {
     };         
    
     $('#info-par').slideToggle('slow')
-
     });
 
 //background slider
@@ -27,14 +25,11 @@ setInterval(function(){
   document.body.style.backgroundImage = 'url('+images[c]+')';
 },6000);
 
-
 //toggle menu slidebar
 $('#menu-click').click(function() {
     $('.toggle-menu').toggleClass('menu-active');
     if($('.toggle-menu').hasClass('menu-active')) {
         $('#info-par').slideUp();
         $('#logo').css('transform', 'rotate(90deg)' );
-
     }
-
 });
